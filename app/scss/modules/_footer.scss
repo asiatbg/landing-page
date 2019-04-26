@@ -1,0 +1,138 @@
+footer {
+  background-color: $section-color;
+  box-sizing: border-box;
+  font-family: $heading-font;
+  height: 100%;
+  padding: 7em 3em;
+  width: 100%;
+  @include breakpoint(sm) {
+    padding: 5em 3em;
+  }
+
+  a {
+    color: $header-color;
+    font-family: $heading-font;
+    margin-right: 3em;
+
+    &:hover {
+      color: $active-color;
+    }
+  }
+
+  .upper-column {
+    display: flex;
+    flex-flow: row;
+    @include breakpoint(sm) {
+      flex-flow: column;
+    }
+
+    .newsletter-wrapper {
+      flex-grow: 3;
+
+      label {
+        position: relative;
+
+        input {
+          background-color: transparent;
+          border-color: $header-color;
+          border-style: solid;
+          border-width: 0 0 1px;
+          font-family: $heading-font;
+          font-size: 16px;
+          padding: 1em 1em 1em 0;
+          width: 26em;
+          @include breakpoint(md) {
+            width: 85%;
+          }
+          @include breakpoint(sm) {
+            margin-bottom: 1em;
+            width: 100%;
+            }
+          }
+
+        .submit-arrow {
+          background-color: transparent;
+          background-image: url('../../images/icons/submit-newsletter.svg');
+          background-position: right center;
+          background-repeat: no-repeat;
+          border: 0;
+          content: '';
+          cursor: pointer;
+          height: calc(100% + 2.8em);
+          position: absolute;
+          right: 0;
+          bottom: -1.5em;
+          width: 40px;
+        }
+      }
+
+    }
+
+    .navigation-wrapper {
+      flex-grow: 1;
+
+      .navigation-footer {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .external-links {
+      flex-grow: 1;
+
+      nav {
+        display: flex;
+        align-items: center;
+        @include breakpoint(sm) {
+          margin-top: 1em;
+        }
+
+        a {
+          position: relative;
+
+          .external-link-icon {
+            content: '';
+            background: url('../../images/icons/external-link-icon.svg');
+            background-repeat: no-repeat;
+            display: inline;
+            padding: 8px;
+            position: absolute;
+            top: 0;
+            left: 5em;
+          }
+        }
+      }
+    }
+  }
+
+
+  .bottom-column {
+    .regulations {
+      ul {
+        display: flex;
+        margin-top: 5em;
+        @include breakpoint(sm) {
+          flex-flow: column;
+          margin-top: 1em;
+        }
+
+        .credits {
+          display: flex;
+          margin-left: auto;
+          width: 18%;
+          padding-right: 7px;
+          @include breakpoint(md) {
+            width: 25%;
+            padding-right: 0;
+          }
+
+          @include breakpoint(sm) {
+            margin: 0;
+            width: auto;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

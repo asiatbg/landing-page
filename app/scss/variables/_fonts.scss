@@ -1,0 +1,45 @@
+$heading-font: JosefinSans;
+$main-font: OpenSans;
+
+
+@font-face {
+  font-family: JosefinSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../fonts/Josefin_Sans/JosefinSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: JosefinSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../fonts/Josefin_Sans/JosefinSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: JosefinSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/Josefin_Sans/JosefinSans-Light.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/Open_Sans/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: italic;
+  font-weight: 400;
+  src: url('../../fonts/Open_Sans/OpenSans-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../../fonts/Open_Sans/OpenSans-ExtraBold.ttf');
+}

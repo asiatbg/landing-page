@@ -1,0 +1,201 @@
+@import '../variables/colors';
+@import '../grid-template/grid-areas';
+@import '../mixins/breakpoints';
+
+@include breakpoint(hover) {
+
+  .nav-menu {
+
+    a {
+      &:hover {
+
+        &::after {
+          width: 100%;
+        }
+      }
+
+      &::after {
+        background: $primary-text-color;
+        content: '';
+        display: block;
+        height: 2px;
+        transition: width 1s;
+        width: 0;
+      }
+    }
+  }
+
+  .submenu {
+    &:hover {
+      .is-visible {
+        display: inline;
+      }
+
+    }
+  }
+}
+
+@include breakpoint(lg) {
+  .nav-menu {
+    display: grid;
+    grid-template-areas: 'logo logo . whistlist . cart .'
+    '. shop about stories blog search account';
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 0 3em;
+    text-align: start;
+
+    li {
+      padding-top: 1em;
+
+      a {
+        text-align: start;
+      }
+    }
+
+    .logo {
+      padding-top: 1.5em;
+    }
+
+
+    .whistlist,
+    .cart {
+      padding-top: 2.7em;
+    }
+  }
+
+  .submenu-nav {
+    li {
+      border-bottom: 0;
+      padding: 0;
+    }
+  }
+
+ }
+
+
+@include breakpoint(md) {
+  .nav-menu {
+    grid-template-areas: 'logo logo logo . whistlist . cart '
+    '. shop about stories blog search account';
+  }
+}
+
+@include breakpoint(sm) {
+  header {
+    .overlay {
+      animation: display-none-transition 1s both;
+      display: none;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    .transition-overlay {
+      display: block;
+      height: auto;
+      opacity: 1;
+    }
+
+    @keyframes display-none-transition {
+      0% {
+        opacity: 0;
+      }
+    }
+
+    .overlay-nav-menu {
+      grid-template-areas: 'logo whistlist cart close-btn' 'shop shop shop shop' 'about about about about' 'blog blog blog blog' 'stories  stories stories stories' 'search  search account account';
+      grid-template-columns: 4fr 1fr 1fr 1fr;
+      grid-template-rows: repeat(8, auto);
+      padding: 0 2em 5em;
+    }
+
+    .grid-menu {
+      grid-template-areas: 'logo whistlist cart close-btn';
+      grid-template-columns: 4fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      height: 100%;
+      padding: 0 2em 2em;
+    }
+
+    nav {
+      background-color: $secondary-text-color;
+    }
+
+    .nav-menu {
+
+      .account {
+        position: relative;
+        text-align: right;
+      }
+
+      li {
+        border-bottom: 1px solid $primary-text-color;
+        padding: 1.5em 0;
+        width: 100%;
+
+        a {
+          hover::after {
+            width: 0;
+          }
+        }
+      }
+
+      .logo {
+        box-sizing: content-box;
+        display: grid;
+        padding: 0;
+
+        img {
+          align-self: center;
+          padding: 0;
+        }
+      }
+
+      .hidden-name {
+        display: none;
+      }
+
+      .visible-hamburger-btn {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        font-size: 26px;
+        justify-content: flex-end;
+        padding-top: 1.9em;
+      }
+    }
+
+    .whistlist,
+    .cart {
+      display: flex;
+      justify-content: flex-end;
+      //padding-top: 2em;
+      span {
+        //bottom: 1.1em;
+        position: relative;
+      }
+    }
+
+    .show-submenu {
+      display: block;
+    }
+
+
+    .submenu-nav {
+      padding: 0;
+
+      li {
+        border-bottom: 0;
+        padding: 0;
+      }
+    }
+
+    .arrow-icon {
+      cursor: pointer;
+      display: inline;
+      float: right;
+      position: relative;
+    }
+  }
+}

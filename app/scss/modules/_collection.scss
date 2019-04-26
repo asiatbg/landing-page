@@ -1,0 +1,40 @@
+.collection {
+  background: url('');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vw;
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(md) {
+    background-position: right;
+    top: 8%;
+  }
+
+  .collection-wrapper {
+    position: absolute;
+    right: 10%;
+    top: 14%;
+    width: 45%;
+
+    h4 {
+      margin: 1em 0;
+    }
+
+    @include breakpoint(md) {
+      right: 5%;
+      top: 8%;
+    }
+    @include breakpoint(sm) {
+      right: 4%;
+      top: 4%;
+      width: 55%;
+    }
+    @include breakpoint(xs) {
+      right: 0;
+      top: 2%;
+      width: 85%;
+    }
+  }
+}

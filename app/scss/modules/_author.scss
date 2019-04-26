@@ -1,0 +1,42 @@
+.author {
+  background-color: $main-color;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  padding: 10em 10em 10em 1em;
+
+  @include breakpoint(md) {
+    flex-flow: column-reverse;
+    padding: 10em;
+  }
+
+  @include breakpoint(sm) {
+    padding: 5em;
+  }
+
+  @include breakpoint(xs) {
+    padding: 3em;
+  }
+
+  img {
+    max-width: 100%;
+    min-height: 100%;
+  }
+
+  .author-details {
+    align-self: flex-end;
+    margin: 2em 2em 0;
+    @include breakpoint(md) {
+      align-self: flex-start;
+      margin: 0;
+    }
+
+    a {
+      margin-top: 5em;
+      @include breakpoint(md) {
+        margin-bottom: 1em;
+        margin-top: 1em;
+      }
+    }
+  }
+}

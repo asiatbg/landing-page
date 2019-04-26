@@ -1,0 +1,142 @@
+header {
+  display: block;
+  left: 0;
+  max-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+
+  nav {
+    background-color: $main-color;
+
+  }
+}
+.black-heading {
+  align-items: center;
+  background-color: $header-color;
+  display: grid;
+  grid-template-columns: 5fr 3fr 1fr 0.3fr;
+  grid-template-rows: 1fr;
+  justify-items: end;
+
+  li {
+    padding: 0.5em 1em;
+    text-align: center;
+
+    a {
+      font-family: $heading-font;
+      color: $secondary-text-color;
+      text-decoration: none;
+    }
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+.nav-menu {
+  display: grid;
+  font-weight: 400;
+  grid-template-areas: 'logo shop about stories blog search account cart whistlist';
+  grid-template-columns: 3fr 1.8fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: start;
+  list-style-type: none;
+  padding: 0 1em;
+
+  li {
+    padding: 4em 0 1em;
+
+    a {
+      font-family: $heading-font;
+      color: $header-color;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  .logo {
+    padding-top: 2.5em;
+
+    img {
+      max-width: 100%;
+      padding: 0 1em;
+
+    }
+  }
+}
+
+
+.whistlist {
+  align-items: start;
+  display: flex;
+
+
+
+  span {
+    background: url('../../images/icons/wishlist-heart.svg');
+    background-repeat: no-repeat;
+    bottom: 3px;
+    color: $primary-text-color;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    line-height: 0.9em;
+    margin-left: 1em;
+    padding: 8px;
+    position: relative;
+  }
+}
+
+.cart {
+  align-items: start;
+  display: flex;
+
+  span {
+    background-color: $header-color;
+    border-radius: 50%;
+    bottom: 3px;
+    color: $primary-text-color;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    line-height: 1.1em;
+    margin-left: 1em;
+    padding: 7px;
+    position: relative;
+  }
+}
+
+.submenu-nav {
+  display: none;
+
+  li {
+    padding: 0;
+
+    &:first-child {
+      padding-top: 1em;
+    }
+
+    a:hover {
+      color: $active-color;
+
+      &::after {
+        color: $primary-text-color;
+        width: 0;
+      }
+    }
+  }
+}
+
+.visible-hamburger-btn {
+  display: none;
+}
+
+.arrow-icon {
+  display: none;
+}
+
+
+
